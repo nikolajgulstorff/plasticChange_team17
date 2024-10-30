@@ -1,15 +1,278 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Scrollbar from "../components/Scrollbar.astro";
+import Skriv_under from "../components/Scrollbar.astro";
+
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
-</MainLayout>
+	<MainLayout title="Plastic Change">
+		<Scrollbar />
+		
+			 <!-- <section class="relative h-auto w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp'); background-attachment: fixed;">
+		
+			Sektion 1 
+				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+					<h1 class="hero glitch layers text-[#D1FD0A] text-7xl font-bold" data-text="PLASTIKPLANETEN">
+						<span>PLASTIKPLANETEN</span>
+					</h1>
+					<p class="text-white text-3xl font-bold">Den skjulte trussel i dybet</p>
+					<p class="text-white">Et sted i havet<br>År 2050</p>
+				</article>
+			
+				<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
+					<h2 class="text-5xl font-bold mb-32" id="first-heading">
+						Hvert år afbrændes der<br>
+						<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik
+					</h2>
+				
+					<h2 class="text-5xl font-bold mt-32" id="second-heading">
+						i 2050 forurenes der med<br>
+						<span class="text-[#D1FD0A] text-7xl font-bold">65. MIA GIGATONS</span><br>CO2 om året
+					</h2>
+				</article>
+				
+				</article>
+			
+				<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
+					<h2 class="text-5xl font-bold mb-32" id="first-heading">
+						Globalt produceres der<br>
+						<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik om året
+					</h2>
+					<h2 class="text-5xl font-bold mt-32" id="second-heading">
+						Engangsembalage udgør<br>
+						<span class="text-[#D1FD0A] text-7xl font-bold">160 MIO. TONS</span><br>Af den samlede produktion
+					</h2>
+				</article>
+			
+				<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 pb-[40%] text-white">
+					<h2 class="text-5xl font-bold mb-32" id="first-heading">
+						Hvert år ender<br>
+						<span class="text-[#D1FD0A] text-7xl font-bold">8-10 MIO. TONS</span><br>plastik i havet
+					</h2>
+					<h2 class="text-5xl font-bold mt-32" id="second-heading">
+						Det er tilsvarende at én lastbil med plastik tømmes<br>
+						<span class="text-[#D1FD0A] text-7xl font-bold">HVERT MINUT</span>
+					</h2>
+				</article>
+			
+			</section> -->
+
+
+
+
+			<section>
+				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+					<h1 class="hero glitch layers text-[#D1FD0A] text-7xl font-bold" data-text="PLASTIKPLANETEN">
+						<span>PLASTIKPLANETEN</span>
+					</h1>
+					<p></p>
+				</article>
+				<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp');"></div>
+				
+					<div class="relative flex-col flex">
+
+						<div class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
+							<h2 class="text-5xl font-bold mb-32" id="first-heading">
+								Hvert år afbrændes der<br>
+								<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik
+							</h2>
+						
+							<h2 class="text-5xl font-bold mt-32" id="second-heading">
+								Hvilket foruener med<br>
+								<span class="text-[#D1FD0A] text-7xl font-bold">400. MIO TONS</span><br>CO2 om året
+							</h2>
+						</div>
+						
+						<div class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
+							<h2 class="text-5xl font-bold mb-32" id="first-heading">
+								Globalt produceres der<br>
+								<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik om året
+							</h2>
+							<h2 class="text-5xl font-bold mt-32" id="second-heading">
+								Engangsembalage udgør<br>
+								<span class="text-[#D1FD0A] text-7xl font-bold">160 MIO. TONS</span><br>Af den samlede produktion
+							</h2>
+						</div>
+
+						<div class="min-h-screen flex flex-col text-center items-center justify-center p-8 pb-[40%] text-white">
+							<h2 class="text-5xl font-bold mb-32" id="first-heading">
+								Hvert år ender<br>
+								<span class="text-[#D1FD0A] text-7xl font-bold">8-10 MIO. TONS</span><br>plastik i havet
+							</h2>
+							<h2 class="text-5xl font-bold mt-32" id="second-heading">
+								Det er tilsvarende at én lastbil med plastik tømmes<br>
+								<span class="text-[#D1FD0A] text-7xl font-bold">HVERT MINUT</span>
+							</h2>
+						</div>
+			</section>
+			
+
+				<!-- Sektion 2 -->
+				<section class=" relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
+
+					<article class="grid grid-cols-2 grid-rows-1 gap-4 mx-[10%] text-white">
+					<div>
+						<p class="pb-[10%]">Når plastik ender i naturen, bliver det en dræber.  Der er fundet plastikpartikler hos en række havfugle, havpattedyr, skildpadder og fisk. Det giver dem en falsk følelse af mæthed og blokerer for, at dyrene kan optage næring gennem tarmene. Dyrene kan derfor ende med at dø af sult, når de spiser plastik. Andre dyr bliver viklet ind i plastik på jagt efter føde og ender med at drukne.</p>
+						<h3 class="text-[#D1FD0A] text-3xl font-bold">I 2050 FORVENTES DER AT VÆRE MERE PLASTIK I HAVET END FISK</h3>
+					</div>
+
+						<div class="flex justify-center">
+							<img src="your-image-source.jpg" alt="Image description" class="w-1/2 object-cover">
+						</div>
+					</article>
+
+					<article class="grid grid-cols-2 grid-rows-1 gap-4 text-white pb-[50%] mx-[10%]">
+						<div>
+							<p class="pb-[10%]">Plastikken nedbrydes ikke men bliver til mikroplast. Når mikroplastik ligger i havet kan det “suge” miljøgifte og farlige kemikalier til sig, som dyrene får med, når de spiser plastik. Dyr, der ender på vores egen tallerken..</p>
+							<h3 class="text-[#D1FD0A] text-3xl font-bold">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. 
+								DET SVARER TIL AT SPISE SIT EGET DANKORT</h3>
+						</div>
+	
+							<div class="flex flex-col items-center justify-center">
+								<img src="your-image-source.jpg" alt="Image description" class="w-1/2 object-cover">
+								<img src="your-image-source.jpg" alt="Image description" class="w-1/2 object-cover">
+							</div>
+						</article>
+	
+				</section>
+			
+				<!-- Sektion 3 -->
+				 
+				<section class="relative w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_3.webp');" >
+
+						<article class="text-center mx-[10%] mr-[10%]">
+							<h3 class=" text-white text-3xl font-bold"> “PLASTIK DEFINERE VORES KULTUR. 
+								VI MÅ IKKE LADE DET DEFINERE VORES FREMTID”
+								-HENRIK BEHA PEDERSEN 2014"</h3>
+							<h3 class="text-[#D1FD0A] text-7xl font-bold">#SINGLEUSESUCKS</h3>
+						</article>
+				</section>
+
+				<!-- Sektion 4 -->
+
+				<section class="relative w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section2_1.png');">
+					
+					<h3 class="text-5xl text-center">Hvad gør vi med fremtiden</h3>
+
+					<article class="flex">
+						<div class="flex">
+							<p>Lige nu og i fremtiden bliver størstedelen af vores plastik affald smidt ud og ender i miljøet eller sendt til forbænding. Dette vil vi i Plastic Change gerne ændre,</p>
+							<img src="../img/trianglePre.png">
+						</div>
+
+						<div class="flex">
+							<img src="../img/trianglePost.png">
+							<p>Vores løsning er at reducere vores brug af plastik, og genbruge det der allerede findes. </p>
+							
+						</div>
+					</article>
+
+			
+
+					<!-- Sektion 5 -->
+
+				
+					<h3></h3>
+					<h4></h4>
+
+						<article>
+							<div>
+							<img>
+							<img>
+							<img>
+							</div>
+							<div>
+							<img>
+							<img>
+							<img>
+							<img>
+							</div>
+						</article>
+
+			
+
+				<!-- Sektion 5 -->
+
+
+				
+						<article class="flex items-center justify-center h-screen mx-[10%] mr-[10%]">
+							
+							<div class="p-6 rounded-lg max-w-md w-full text-center">
+								<!-- Overskrift -->
+								<h3 class="text-5xl font-bold text-black">16.000</h3>
+								<p class="mb-4">Har allerede skrevet under</p>
+						
+								<!-- Progress bar -->
+								<div class="w-full bg-gray-300 h-10 rounded-full mb-6">
+									<div class="h-full bg-blue-600 rounded-full" style="width: 70%;"></div>
+								</div>
+						
+								<!-- E-mail input -->
+								<input type="email" placeholder="jensjensen@mail.com" class="w-full bg-gray-100 p-2 mb-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+						
+								<!-- Checkbox for vilkår og betingelser -->
+								<label class="flex items-center space-x-2 mb-4 text-gray-600 text-sm">
+									<input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600 border-gray-300 rounded">
+									<span>Jeg accepterer vilkår og betingelser</span>
+								</label>
+						
+								<!-- Skriv Under Knap -->
+								<button class="w-full bg-[#D1FD0A] text-black font-semibold p-2 rounded-full hover:bg-blue-600">
+									SKRIV UNDER
+								</button>
+							</div>
+						</article>
+				
+
+					<!-- Sektion 6 -->
+
+		
+						<article class="text-black mx-[10%]">
+							<h3 class="text-3xl text-center font-bold pb-[5%]">Hvem er vi?</h3>
+
+							<div class="flex">
+								<p class="w-[40%] ">
+									Plastic Change er en dansk miljøorganisation, der kæmper mod plastforurening i havene.<br><br>
+									Vi skaber opmærksomhed, påvirker politik og samarbejder globalt for at reducere plastik i naturen og finde bæredygtige løsninger.
+								</p>
+								<p class="w-[40%] ml-[5%]">
+									Vil du vide mere om vores arbejde? Tilmeld dig vores nyhedsbrev eller læs mere om hvad vi gør her.
+								</p>
+							</div>
+							<div class="flex mt-[2%]">
+								<input type="email" placeholder="jensjensen@mail.com" class="w-full mr-[5%] bg-gray-100 p-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+								<button class="w-[50%] bg-[#D1FD0A] text-black font-semibold p-2 rounded-full hover:bg-blue-600 ">TILMELD</button>
+							</div>
+
+						</article>
+					</section>
+						
+				
+				
+
+
+
+			<script>
+			/* Import af Motion One biblioteket */
+			import { animate, stagger, inView, scroll, timeline } from "motion";
+
+	
+			 
+			  document.querySelectorAll("h2").forEach((heading) => {
+            // heading starter gemt
+            heading.style.opacity = 0;
+            heading.style.transform = "scale(0.8)";  // Initial smaller scale for zoom effect
+
+            inView(heading, ({ target, isIntersecting }) => {
+                if (isIntersecting) {
+                    // Trigger fade-in and zoom når H2 er i midten af viewport
+                    animate(
+                        target,
+                        { opacity: [0, 1], transform: ["scale(0.8)", "scale(1)"] },
+                        { duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+                    );
+                }
+            }, { margin: "-50% 0px" }); // Trigger point: middle of viewport
+        });
+    </script>
+
+	</MainLayout>

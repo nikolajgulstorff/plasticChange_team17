@@ -1,0 +1,51 @@
+<div class="scrollbar">
+    <div class="scrollbar-thumb" id="scrollbar-thumb"></div>
+</div>
+
+<style>
+    /* Hide default scrollbar */
+    ::-webkit-scrollbar {
+        width: 20px; /* Width of the scrollbar */
+    }
+    ::-webkit-scrollbar-thumb {
+        background: transparent; 
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Background of the track */
+    }
+
+    .scrollbar {
+        position: fixed; /* Keep it fixed on the viewport */
+        top: 10px; /* Add margin from the top */
+        right: 10px; /* Add margin from the right */
+        height: calc(100% - 20px); /* Adjust height to accommodate margins */
+        width: 8px; /* Width of the scrollbar */
+        background: #f1f1f1; /* Background of the track */
+        z-index: 1000; /* Ensure it's above other elements */
+        border-radius: 4px; /* Optional: rounded corners */
+    }
+
+    .scrollbar-thumb {
+        background: lightblue; /* Solid light blue color */
+        border-radius: 4px;
+        width: 100%; /* Fill the scrollbar width */
+    }
+
+    /* Ensure content is scrollable */
+    
+</style>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+        const scrollbarThumb = document.getElementById('scrollbar-thumb');
+        scrollbarThumb.style.height = `${scrollPercent}%`; // Adjust the thumb height based on scroll
+
+        // Set the thumb's background color to a solid light blue
+        scrollbarThumb.style.backgroundColor = 'lightblue'; // Solid light blue color
+    });
+</script>
