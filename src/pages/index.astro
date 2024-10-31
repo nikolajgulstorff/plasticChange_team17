@@ -5,18 +5,23 @@ import Skriv_under from "../components/Scrollbar.astro";
 import Foodchain from "../components/Foodchain.astro";
 
 ---
+
+
 	<MainLayout title="Plastic Change">
 		<Scrollbar />
 		
-
+		
 		<!-- Sektion 1 -->
 		 
 			<section id="sektion1">
 				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
 					<h1 class="hero glitch layers text-[#D1FD0A] text-9xl font-bold" data-text="PLASTIKPLANETEN"><span>PLASTIKPLANETEN</span></h1>
 				</article>
-				
-				
+
+				<div class="fixed bottom-5 right-10 z-20">
+					<img src="../img/megafon.png" alt="Megaphone" id="megaphoneImg" class="transition-transform duration-300 ease-in-out hover:scale-110 hover:opacity-90">
+				</div>
+
 				<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp');"></div>
 				
 				<div class="absolute inset-0 z-10 pointer-events-none">
@@ -49,6 +54,7 @@ import Foodchain from "../components/Foodchain.astro";
 			</section>
 				<!-- Sektion 1 færdig -->
 
+				
 				<!-- Sektion 2 -->
 				<section id="sektion2" class="relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
 
@@ -495,6 +501,16 @@ inView("#staggers3", () => {
         { delay: stagger(1, { start: 1.5 }), 
 		duration: 1.5 }
     );
+});
+
+const megaphoneImg = document.getElementById("megaphoneImg");
+
+megaphoneImg.addEventListener("mouseenter", () => {
+    megaphoneImg.src = "../img/megafon_hover.png";
+});
+
+megaphoneImg.addEventListener("mouseleave", () => {
+    megaphoneImg.src = "../img/megafon.png";
 });
     </script>
 
