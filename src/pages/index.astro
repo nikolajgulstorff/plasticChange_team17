@@ -289,6 +289,43 @@ import Foodchain from "../components/Foodchain.astro";
             }, { margin: "-50% 0px" }); // Trigger point: middle of viewport
         });
 
+		const garbageImages = document.querySelectorAll(".garbage-animation");
+
+
+function startGarbageFall() {
+  garbageImages.forEach((originalImg, index) => {
+    const garbageClone = originalImg.cloneNode(true);
+    document.body.appendChild(garbageClone); 
+
+    const randomPosition = Math.random() * 90 + 5;
+    garbageClone.style.left = `${randomPosition}%`;
+    garbageClone.style.top = "-100px"; 
+
+    // Animate the clone
+    animate(
+      garbageClone,
+      { 
+        y: [-100, 6800],        // Fall from top to deep position
+        opacity: [1,0.95, 0],       // Fade out by the end
+      },
+      {
+        duration: 20 + index * 0.5,  // Vary duration for a natural look
+        easing: "ease-in-out",
+        delay: index * 0.5,          // Slight delay for each item
+      }
+    ).finished.then(() => {
+      // Remove clone after animation finishes
+      garbageClone.remove();
+    });
+  });
+}
+
+// Start a new animation cycle every 5 seconds
+setInterval(startGarbageFall, 3000);
+
+// Initial start
+startGarbageFall();
+
 		
     </script>
 
