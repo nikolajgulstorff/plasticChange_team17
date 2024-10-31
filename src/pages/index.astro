@@ -8,70 +8,31 @@ import Foodchain from "../components/Foodchain.astro";
 	<MainLayout title="Plastic Change">
 		<Scrollbar />
 		
-			 <!-- <section class="relative h-auto w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp'); background-attachment: fixed;">
-		
-			Sektion 1 
-				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
-					<h1 class="hero glitch layers text-[#D1FD0A] text-7xl font-bold" data-text="PLASTIKPLANETEN">
-						<span>PLASTIKPLANETEN</span>
-					</h1>
-					<p class="text-white text-3xl font-bold">Den skjulte trussel i dybet</p>
-					<p class="text-white">Et sted i havet<br>År 2050</p>
-				</article>
-			
-				<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
-					<h2 class="text-5xl font-bold mb-32" id="first-heading">
-						Hvert år afbrændes der<br>
-						<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik
-					</h2>
-				
-					<h2 class="text-5xl font-bold mt-32" id="second-heading">
-						i 2050 forurenes der med<br>
-						<span class="text-[#D1FD0A] text-7xl font-bold">65. MIA GIGATONS</span><br>CO2 om året
-					</h2>
-				</article>
-				
-				</article>
-			
-				<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
-					<h2 class="text-5xl font-bold mb-32" id="first-heading">
-						Globalt produceres der<br>
-						<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik om året
-					</h2>
-					<h2 class="text-5xl font-bold mt-32" id="second-heading">
-						Engangsembalage udgør<br>
-						<span class="text-[#D1FD0A] text-7xl font-bold">160 MIO. TONS</span><br>Af den samlede produktion
-					</h2>
-				</article>
-			
-				<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 pb-[40%] text-white">
-					<h2 class="text-5xl font-bold mb-32" id="first-heading">
-						Hvert år ender<br>
-						<span class="text-[#D1FD0A] text-7xl font-bold">8-10 MIO. TONS</span><br>plastik i havet
-					</h2>
-					<h2 class="text-5xl font-bold mt-32" id="second-heading">
-						Det er tilsvarende at én lastbil med plastik tømmes<br>
-						<span class="text-[#D1FD0A] text-7xl font-bold">HVERT MINUT</span>
-					</h2>
-				</article>
-			
-			</section> -->
-
-
 
 		<!-- Sektion 1 -->
+		 
 			<section>
 				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+					
 					<h1 class="hero glitch layers text-[#D1FD0A] text-7xl font-bold" data-text="PLASTIKPLANETEN">
 						<span>PLASTIKPLANETEN</span>
 					</h1>
 					<p></p>
 				</article>
+				
 				<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp');"></div>
+
+				<div class="absolute inset-0 z-10 pointer-events-none">
+					<img src="../img/flaskBlue.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2 "/>
+					<img src="../img/flaskBlue.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
+					<img src="../img/flaskYellow.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
+					<img src="../img/plastbag.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
+					<img src="../img/plastbag.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
+				</div>
 				
 					<div class="relative flex-col flex">
 
-						<div class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
+						<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
 							<h2 class="text-5xl font-bold mb-32" id="first-heading">
 								Hvert år afbrændes der<br>
 								<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik
@@ -81,9 +42,9 @@ import Foodchain from "../components/Foodchain.astro";
 								Hvilket foruener med<br>
 								<span class="text-[#D1FD0A] text-7xl font-bold">400. MIO TONS</span><br>CO2 om året
 							</h2>
-						</div>
+						</article>
 						
-						<div class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
+						<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 text-white">
 							<h2 class="text-5xl font-bold mb-32" id="first-heading">
 								Globalt produceres der<br>
 								<span class="text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>plastik om året
@@ -92,9 +53,9 @@ import Foodchain from "../components/Foodchain.astro";
 								Engangsembalage udgør<br>
 								<span class="text-[#D1FD0A] text-7xl font-bold">160 MIO. TONS</span><br>Af den samlede produktion
 							</h2>
-						</div>
+						</article>
 
-						<div class="min-h-screen flex flex-col text-center items-center justify-center p-8 pb-[40%] text-white">
+						<article class="min-h-screen flex flex-col text-center items-center justify-center p-8 pb-[40%] text-white">
 							<h2 class="text-5xl font-bold mb-32" id="first-heading">
 								Hvert år ender<br>
 								<span class="text-[#D1FD0A] text-7xl font-bold">8-10 MIO. TONS</span><br>plastik i havet
@@ -103,7 +64,7 @@ import Foodchain from "../components/Foodchain.astro";
 								Det er tilsvarende at én lastbil med plastik tømmes<br>
 								<span class="text-[#D1FD0A] text-7xl font-bold">HVERT MINUT</span>
 							</h2>
-						</div>
+						</article>
 			</section>
 				<!-- Sektion 1 færdig -->
 
@@ -112,8 +73,8 @@ import Foodchain from "../components/Foodchain.astro";
 
 					<article class="pt-[10%] grid grid-cols-2 grid-rows-1 gap-4 mx-[10%] text-white">
 					<div>
-						<p class="pb-[10%]">Når plastik ender i naturen, bliver det en dræber.  Der er fundet plastikpartikler hos en række havfugle, havpattedyr, skildpadder og fisk. Det giver dem en falsk følelse af mæthed og blokerer for, at dyrene kan optage næring gennem tarmene. Dyrene kan derfor ende med at dø af sult, når de spiser plastik. Andre dyr bliver viklet ind i plastik på jagt efter føde og ender med at drukne.</p>
-						<h3 class="text-[#D1FD0A] text-3xl font-bold">I 2050 FORVENTES DER AT VÆRE MERE PLASTIK I HAVET END FISK</h3>
+						<p class="text-2xl pb-[10%]">Når plastik ender i naturen, bliver det en dræber.  Der er fundet plastikpartikler hos en række havfugle, havpattedyr, skildpadder og fisk. Det giver dem en falsk følelse af mæthed og blokerer for, at dyrene kan optage næring gennem tarmene. Dyrene kan derfor ende med at dø af sult, når de spiser plastik. Andre dyr bliver viklet ind i plastik på jagt efter føde og ender med at drukne.</p>
+						<h2 class="text-[#D1FD0A] text-6xl font-bold">I 2050 FORVENTES DER AT VÆRE MERE PLASTIK I HAVET END FISK</h2>
 					</div>
 
 						<div class="flex justify-center">
@@ -121,11 +82,11 @@ import Foodchain from "../components/Foodchain.astro";
 						</div>
 					</article>
 				
-					<article class="grid grid-cols-2 grid-rows-1 gap-4 text-white pb-[50%] mx-[10%]">
+					<article class="grid grid-cols-2 grid-rows-1 gap-4 text-white mx-[10%] py-[10%]">
 						<div>
-							<p class="pb-[10%]">Plastikken nedbrydes ikke men bliver til mikroplast. Når mikroplastik ligger i havet kan det “suge” miljøgifte og farlige kemikalier til sig, som dyrene får med, når de spiser plastik. Dyr, der ender på vores egen tallerken..</p>
-							<h3 class="text-[#D1FD0A] text-3xl font-bold">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. 
-								DET SVARER TIL AT SPISE SIT EGET DANKORT</h3>
+							<p class="pb-[10%] text-2xl">Plastikken nedbrydes ikke men bliver til mikroplast. Når mikroplastik ligger i havet kan det “suge” miljøgifte og farlige kemikalier til sig, som dyrene får med, når de spiser plastik. Dyr, der ender på vores egen tallerken..</p>
+							<h2 class="text-[#D1FD0A] text-6xl font-bold">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. 
+								DET SVARER TIL AT SPISE SIT EGET DANKORT</h2>
 						</div>
 	
 							<div class="flex flex-col items-center justify-center">
@@ -148,10 +109,6 @@ import Foodchain from "../components/Foodchain.astro";
 							<h3 class="text-[#D1FD0A] text-7xl font-bold">#SINGLEUSESUCKS</h3>
 						</article>
 				</section>
-
-
-
-
 
 
 
@@ -206,20 +163,12 @@ import Foodchain from "../components/Foodchain.astro";
 					</article>
 
 				<!-- Sektion 6 -->
-						
-				<section class="text-center">
-					<h1 class=" fade-in text-[#D1FD0A]">Stem for den globale plastiktraktat</h1>
-					<h3 class="text-white text-3xl py-10">Kæmp med os og gør havet rent igen</h3>
-				
-						<article class="grid lg:grid-cols-3 gap-3">
-
-							<div class="col-start-3 row-start-1 flex flex-col">
-							<img class="self-center w-2/3 animate-swim" src="../img/jelly2.png">
-							</div>
-
-							<div class=" text-center col-start-2 row-start-1 flex-col justify-start">
-								<h3 class="text-5xl font-bold text-[#D1FD0A]">15.938</h3>
-								<p class="mb-4 text-white">Har allerede skrevet under</p>
+						<article class="flex items-center justify-center px-[10%] py-[10%]">
+							
+							<div class="p-6 rounded-lg max-w-md w-full text-center">
+							
+								<h3 class="text-5xl font-bold text-black">16.000</h3>
+								<p class="mb-4">Har allerede skrevet under</p>
 						
 								<div class="w-full max-w-lg h-8 bg-white rounded-xl overflow-hidden mx-auto my-5">
                                 <div id="progress-bar" class="w-full h-full bg-[#0F2637]"></div>
@@ -361,36 +310,44 @@ import Foodchain from "../components/Foodchain.astro";
             }, { margin: "-50% 0px" }); // Trigger point: middle of viewport
         });
 
-	
+		const garbageImages = document.querySelectorAll(".garbage-animation");
 
-inView("#stagger", () => {
-  animate(
-    ".fotosektioninview > div",
-    { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
-    {
-      delay: stagger(1, { start: 0.5 }), // Justér starttid og delay for at finjustere animationen
-      duration: 1.5, // Sætter varigheden af hver animation
-      easing: "ease-out" // Sætter en glidende effekt
-    }
-  );
-});
 
-// JavaScript til at starte animationen i synsfeltet
-const progressBar = document.getElementById("progress-bar");
+function startGarbageFall() {
+  garbageImages.forEach((originalImg, index) => {
+    const garbageClone = originalImg.cloneNode(true);
+    document.body.appendChild(garbageClone); 
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      progressBar.classList.add("animate-progress-fill"); // Tilføj animationen
-      observer.unobserve(progressBar); // Stop med at observere
-    }
+    const randomPosition = Math.random() * 90 + 5;
+    garbageClone.style.left = `${randomPosition}%`;
+    garbageClone.style.top = "-100px"; 
+
+    // Animate the clone
+    animate(
+      garbageClone,
+      { 
+        y: [-100, 6800],        // Fall from top to deep position
+        opacity: [1,0.95, 0],       // Fade out by the end
+      },
+      {
+        duration: 20 + index * 0.5,  // Vary duration for a natural look
+        easing: "ease-in-out",
+        delay: index * 0.5,          // Slight delay for each item
+      }
+    ).finished.then(() => {
+      // Remove clone after animation finishes
+      garbageClone.remove();
+    });
   });
-}, { threshold: 0.5 }); // Aktiver animationen, når 50% af bjælken er synlig
+}
 
-observer.observe(progressBar);
+// Start a new animation cycle every 5 seconds
+setInterval(startGarbageFall, 3000);
 
+// Initial start
+startGarbageFall();
 
-
+		
     </script>
 
 	</MainLayout>

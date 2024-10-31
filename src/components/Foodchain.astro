@@ -7,10 +7,10 @@
         <li class="opacity-1 relative left-2">
             <img src="/img/from_bottle_chain.png" alt="Billed af microplast" class="max-w-[100px] h-auto" />
         </li>
-        <li class="opacity-1 relative">
+        <li class="opacity-1 relative left-2">
             <img src="/img/2_fish_chain.png" alt="Fisk med åben mund der forsøger at spise en plastik flaske" class="max-w-[100px] h-auto" />
         </li>
-        <li class="opacity-1 relative right-2">
+        <li class="opacity-1 relative left-2">
             <img src="/img/2_us_chain.png" alt="Kvinde med åben mund der forsøger at spise en fisk" class="max-w-[100px] h-auto" />
         </li>
         <li class="opacity-1 absolute left-14 top-12 z-1">
@@ -18,3 +18,15 @@
         </li>
     </ul>
 </div>
+
+<script>
+import { inView, animate, stagger } from 'motion';
+
+    inView("#stagger", () => {
+        animate(
+            ".staggeranimation li",
+            { opacity: [0, 1] },
+            { delay: stagger(1, { start: 2 }) }
+        );
+    });
+</script>
