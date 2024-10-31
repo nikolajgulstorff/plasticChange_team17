@@ -139,12 +139,21 @@ import Foodchain from "../components/Foodchain.astro";
 					</article>
 
 				<!-- Sektion 6 -->
-						<article class="flex items-center justify-center px-[10%] py-[10%]">
-							
-							<div class="p-6 rounded-lg max-w-md w-full text-center">
-							
-								<h3 class="text-5xl font-bold text-black">16.000</h3>
-								<p class="mb-4">Har allerede skrevet under</p>
+                        
+                <section class="text-center">
+                    <h1 class=" fade-in text-[#D1FD0A]">Stem for den globale plastiktraktat</h1>
+                    <h3 class="text-white text-3xl py-10">Kæmp med os og gør havet rent igen</h3>
+                
+                        <article class="grid lg:grid-cols-3 gap-3">
+                            <div class="col-start-3 row-start-1 flex flex-col">
+                            <img class="self-center w-2/3 animate-swim" src="../img/jelly2.png">
+                            </div>
+                            <div class=" text-center col-start-2 row-start-1 flex-col justify-start">
+                                <h3 class="text-5xl font-bold text-[#D1FD0A]">15.938</h3>
+                                <p class="mb-4 text-white">Har allerede skrevet under</p>
+
+
+
 						
 								<div class="w-full max-w-lg h-8 bg-white rounded-xl overflow-hidden mx-auto my-5">
                                 <div id="progress-bar" class="w-full h-full bg-[#0F2637]"></div>
@@ -265,6 +274,30 @@ import Foodchain from "../components/Foodchain.astro";
                 }
             }, { margin: "-50% 0px" }); // Trigger point: middle of viewport
         });
+
+		inView("#stagger", () => {
+  animate(
+    ".fotosektioninview > div",
+    { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+    {
+      delay: stagger(1, { start: 0.5 }), // Justér starttid og delay for at finjustere animationen
+      duration: 1.5, // Sætter varigheden af hver animation
+      easing: "ease-out" // Sætter en glidende effekt
+    }
+  );
+});
+// JavaScript til at starte animationen i synsfeltet
+const progressBar = document.getElementById("progress-bar");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      progressBar.classList.add("animate-progress-fill"); // Tilføj animationen
+      observer.unobserve(progressBar); // Stop med at observere
+    }
+  });
+}, { threshold: 0.5 }); // Aktiver animationen, når 50% af bjælken er synlig
+observer.observe(progressBar);
+
 
 		const garbageImages = document.querySelectorAll(".garbage-animation");
 
