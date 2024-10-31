@@ -11,7 +11,7 @@ import Foodchain from "../components/Foodchain.astro";
 
 		<!-- Sektion 1 -->
 		 
-			<section>
+			<section id="sektion1">
 				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
 					<h1 class="hero glitch layers text-[#D1FD0A] text-9xl font-bold" data-text="PLASTIKPLANETEN"><span>PLASTIKPLANETEN</span></h1>
 					<h2>HELLO</h2>
@@ -51,7 +51,7 @@ import Foodchain from "../components/Foodchain.astro";
 				<!-- Sektion 1 færdig -->
 
 				<!-- Sektion 2 -->
-				<section class="relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
+				<section id="sektion2" class="relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
 
 					<div class="absolute inset-0 grid grid-cols-3 grid-rows-3 pointer-events-none">
 						<div class="animate-swim absolute top-[5%] right-[15%]">
@@ -110,7 +110,7 @@ import Foodchain from "../components/Foodchain.astro";
 
 				<!-- Sektion 4 -->
 
-				<section class="relative w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/gradient.svg');">
+				<section id="sektion4" class="relative w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/gradient.svg');">
 				
 					<h1 class=" fade-in text-6xl text-center px-[m10%] py-[5%]">Hvad gør vi med fremtiden?</h1>
 
@@ -139,28 +139,61 @@ import Foodchain from "../components/Foodchain.astro";
 
 					<!-- Sektion 5 -->
 
-					<article class="px-[m10%] py-[10%]">
-						<h3 class="text-[#D1FD0A] text-center text-5xl font-bold">HVAD KAN VI GØRE FOR AT ÆNDRE DET</h3>
-						<h4 class="text-center text-3xl font-bold">DE 7 GODE RÅD MOD PLASTIKSSPILD</h4>
-
-							<div>
-								<div class="flex justify-center">
-									<div class="flex flex-col text-center items-center"><h5>DRIKKEDUNK</h5><img src="../img/7rad_drikkedunk.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>MÆLK</h5><img src="../img/7rad_maelk.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>TØJVASK</h5><img src="../img/7rad_maskinevask.png"></div>
+					<article id="sektion5" class="px-[10%] py-[10%]">
+						<h3 class="text-[#D1FD0A] text-center text-5xl font-bold">HVAD KAN VI GØRE FOR AT ÆNDRE DET?</h3>
+						<h4 class="text-white text-center text-3xl font-bold mt-8">DE 7 GODE RÅD MOD PLASTIKSPILD</h4>
+						
+						<div>
+							<div id="staggers1" class="flex justify-center gap-20 mt-24 staggeranimation text-white">
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">DRIKKEDUNK</h5>
+									<img src="../img/vanddunk 1.png" alt="Drikkedunk" class="max-h-[130px] mt-3 mb-2">
+									<h6>Brug drikkedunk <br> og undgå købevand!</h6>
 								</div>
-								<div class="flex justify-center">
-									<div class="flex flex-col text-center items-center"><h5>PLEJEPRODUKTER</h5><img src="../img/7rad_pleje.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>FESTER</h5><img src="../img/7rad_martini.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>TOILETBESØG</h5><img src="../img/7rad_toilet.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>INDKØB</h5><img src="../img/7rad_indkob.png"></div>
+
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">MÆLK</h5>
+									<img src="../img/milk 1.png" alt="Mælk" class="max-h-[130px] mt-3 mb-2">
+									<h6>Køb mælk uden <br> skruelåg.</h6>
+								</div>
+
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">TØJVASK</h5>
+									<img src="../img/vaskemaskine 1.png" alt="Tøjvask" class="max-h-[130px] mt-3 mb-2">
+									<h6>Fyld maskinen, så <br> du slider mindre på tøjet.</h6>
 								</div>
 							</div>
+					
+							<div id="staggers2" class="flex justify-center gap-16 mt-16 staggeranimation text-white">
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">PLEJEPRODUKTER</h5>
+									<img src="../img/kosmetik 1.png" alt="Plejeprodukter" class="max-h-[130px] mt-3 mb-2">
+									<h6>Køb i store beholdere <br> frem for mange små.</h6>
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">FESTER</h5>
+									<img src="../img/drink 1.png" alt="Fester" class="max-h-[130px] mt-3 mb-2">
+									<h6>Drop engangsservice, <br> balloner og sugeror.</h6>
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">TOILETBESØG</h5>
+									<img src="../img/toilet 1.png" alt="Toiletbesøg" class="max-h-[130px] mt-3 mb-2">
+									<h6>Kun tre ting i toilettet<br> - tis, lort og papir!</h6>
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5 class="mb-4">INDKØB</h5>
+									<img src="../img/mulepose 1.png" alt="Indkøb" class="max-h-[130px] mt-3 mb-2">
+									<h6>Tag mulepose med og <br> sig nej tak til plastikposer.</h6>
+								</div>
+							</div>
+						</div>
 					</article>
+					
+					
 
 				<!-- Sektion 6 -->
                         
-                <section class="text-center">
+                <section id="sektion6" class="text-center">
                     <h1 class=" text-6xl fade-in text-[#D1FD0A]">Stem for den globale plastiktraktat</h1>
                     <h3 class="text-white text-3xl py-10">Kæmp med os og gør havet rent igen</h3>
                 
@@ -206,7 +239,7 @@ import Foodchain from "../components/Foodchain.astro";
 					<!-- Sektion 7 -->
 
 		
-					<article class="px-[10%] py-20">
+					<article id="sektion7" class="px-[10%] py-20">
 						<h1 class="text-6xl text-[#D1FD0A] text-center font-bold pb-[5%]">Hvem er vi?</h1>
 
 					
@@ -246,54 +279,70 @@ import Foodchain from "../components/Foodchain.astro";
 					</article>
 
 
-						<!-- Sektion 8 -->
-						<article class="px-[10%] py-[10%] grid grid-cols-2 gap-4">
-							<div>
-								<p>Plastic Change arbejder for en verden fri for unødvendig plastikforurening.<br><br>
+		<!-- Sektion 8 -->
+        <section id="sektion8" class="px-4 py-8 lg:px-[10%] lg:py-[10%]">
+        <h3 class="text-3xl text-[#D1FD0A] md:text-4xl lg:text-5xl text-center font-bold mb-14">Støt os i kampen mod plastikforurening</h3>
+        <article class="mt-8 flex flex-col lg:flex-row lg:gap-8 lg:ml-32">
+        <div class="px-4 lg:px-0 lg:flex-1">
+			<!-- venstre -->
+            <p class="leading-relaxed mt-20">
+                Plastic Change arbejder for en verden fri for unødvendig plastikforurening.<br><br>
+                Vi drømmer om et samfund, hvor plast ikke forurener havene, drikkevandet eller truer dyrelivet – et samfund uden engangsplast.<br><br>
+                Din støtte hjælper os med at bekæmpe plastikforurening gennem forskning, oplysning og politisk indflydelse.<br>
+                Sammen kan vi udvikle bæredygtige alternativer og uddanne kommende generationer til at tage ansvar for en renere planet.
+            </p>
+        </div>
 
-									Vi drømmer om et samfund, hvor plast ikke forurener havene, drikkevandet eller truer dyrelivet – et samfund uden engangsplast.<br><br>
-									
-									Din støtte hjælper os med at bekæmpe plastikforurening gennem forskning, oplysning og politisk indflydelse.<br>
-									Sammen kan vi udvikle bæredygtige alternativer og uddanne kommende generationer til at tage ansvar for en renere planet.
-								<p>
-								<div>
-									<img>
-									<img>
-									<img>
-									<img> 
-								</div>
-							</div> 
-							<div>
+        <div class="lg:p-16 lg:flex-1 mt-20">
+			<!-- højre -->
+            <div class="flex justify-center mb-14 space-x-4 -mt-20 ">
+                <button class="w-1/2 bg-[#D1FD0A] text-black p-2 rounded-full hover:bg-[#D1FD0A]">Månedligt beløb</button>
+                <button class="w-1/2 bg-white text-black p-2 rounded-full hover:bg-[#D1FD0A]">Engangsbeløb</button>
+            </div>
 
-							<div class="flex justify-center mb-6 space-x-4">
-								<button class="w-1/2 bg-white text-black p-2 rounded-full hover:bg-[#D1FD0A]">Engangsbeløb</button>
-								<button class="w-1/2 bg-white text-black p-2 rounded-full hover:bg-[#D1FD0A]">Månedligt beløb</button>
-							</div>
+            <div class="flex justify-center gap-12 mb-20 items-center">
+                <button class="bg-white w-16 h-16 lg:w-20 lg:h-20 rounded-full hover:bg-[#D1FD0A] transition duration-300">50</button>
+                <button class="bg-[#D1FD0A] w-16 h-16 lg:w-20 lg:h-20 rounded-full hover:bg-[#D1FD0A] transition duration-300">75</button>
+                <button class="bg-white w-16 h-16 lg:w-20 lg:h-20 rounded-full hover:bg-[#D1FD0A] transition duration-300">125</button>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2 font-semibold">Vælg selv beløb du vil støtte med:</label>
+                <input type="number" placeholder="Indtast beløb" class="w-full p-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <button class="w-full bg-[#D1FD0A] text-black p-2 rounded-full hover:bg-[#c8e640]">Ja tak, støt nu!</button>
+        </div>
+    </article>
+	<div id="staggers3" class="flex flex-wrap lg:flex-nowrap justify-center gap-8 mt-12 text-sort">
+		<div class="flex flex-col items-center relative group w-40 md:w-48">
+			<img src="../img/fisk_støt.png" alt="Fisk svømmende i havet" class="max-h-24 md:max-h-28 mt-3">
+			<span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-white p-2 rounded mt-2 text-left">
+				Hvert år ender mindst 15 millioner tons plastik i havet. Det svarer omtrent til, at der hvert minut bliver tømt to lastbiler med plastik ud i havet.
+			</span>
+		</div>
+		<div class="flex flex-col items-center relative group w-40 md:w-48">
+			<img src="../img/fod_støt.png" alt="Fodaftryk på jorden" class="max-h-24 md:max-h-28 mt-3">
+			<span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-white p-2 rounded mt-2 text-left">
+				I dag udleder plastikproduktionen mere CO2 end hele den globale flyindustri, og produktionen forventes at firedobles inden 2050.
+			</span>
+		</div>
+		<div class="flex flex-col items-center relative group w-40 md:w-48">
+			<img src="../img/globe_støt.png" alt="Globus af jorden" class="max-h-24 md:max-h-28 mt-3">
+			<span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-white p-2 rounded mt-2 text-left">
+				Alt for meget plastik smides ud og brændes af efter være brugt i ganske få minutter.
+			</span>
+		</div>
+		<div class="flex flex-col items-center relative group w-40 md:w-48 bg-transparent">
+			<img src="../img/kemi_støt.png" alt="Kemi og plast" class="max-h-24 md:max-h-28 mt-3 bg-transparent">
+			<span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-white p-2 rounded mt-2 text-left">
+				Op mod 12.000 forskellige typer kemikalier bruges i emballage og andre former for fødevarekontaktmateriale.
+			</span>
+		</div>
+		
+	</div>
+</section>
 						
-							<!-- Donations muligheder -->
-							<div class="flex 3 gap-4 mb-6 items-center">
-								<button class="bg-white w-16 h-16 rounded-full hover:bg-[#D1FD0A] transition duration-300">50</button>
-								<button class="bg-white w-16 h-16 rounded-full hover:bg-[#D1FD0A] transition duration-300">75</button>
-								<button class="bg-white w-16 h-16 rounded-full hover:bg-[#D1FD0A] transition duration-300">125</button>
-							</div>
-						
-							<!-- Vælg selv -->
-							<div class="mb-4">
-								<label class="block mb-2 font-semibold">Vælg selv beløb du vil støtte med:</label>
-								<input type="number" placeholder="Indtast beløb" class="w-full p-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-							</div>
-						
-							<!-- Submit Knap -->
-							<button class="w-full bg-[#D1FD0A] text-black p-2 rounded-full hover:bg-green-700">Ja tak, støt nu!</button>
-						<div>
-						</article>
-
-					</section>
-						
-				
-				
-
-
 
 			<script>
 			/* Import af Motion One biblioteket */
@@ -411,7 +460,40 @@ observer.observe(progressBar);
 		
 		startGarbageFall();
 
-		
+
+
+// Animation for the first stagger group
+inView("#staggers1", () => {
+    animate(
+        "#staggers1 > div",
+        { opacity: [0, 1], transform: ["translateX(-100px)", "translateX(0)"] },
+        { delay: stagger(0.3, { start: 0.5 }) }
+    );
+});
+
+// Animation for the second stagger group
+inView("#staggers2", () => {
+    animate(
+        "#staggers2 > div",
+        { opacity: [0, 1], transform: ["translateX(-100px)", "translateX(0)"] },
+        { delay: stagger(0.3, { start: 1.5 }) }
+    );
+});
+/// Animation for the stagger group
+inView("#staggers3", () => {
+    animate(
+        "#staggers3 > div", // Opdateret fra #staggers2 til #staggers3
+        { 
+            opacity: [0, 1], 
+            transform: [
+                "translateX(-100px) rotate(0deg)", // Startposition
+                "translateX(0) rotate(360deg)"     // Slutposition
+            ] 
+        },
+        { delay: stagger(1, { start: 1.5 }), 
+		duration: 1.5 }
+    );
+});
     </script>
 
 	</MainLayout>
