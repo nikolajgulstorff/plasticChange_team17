@@ -4,7 +4,7 @@
     <body>
         <!-- Header -->
         <header x-data="{ showMenu: false }" class="fixed top-0 left-0 w-full z-50">
-            <div class="flex justify-between items-center max-w-7xl mx-auto ml-8 py-4">
+            <div class="flex justify-between items-center max-w-[87rem] mx-auto ml-8 py-4">
                 <!-- Burger Menu Knappen -->
                 <button @click="showMenu = !showMenu" class="text-white focus:outline-none mr-4">
                     <!-- Ikon -->
@@ -14,9 +14,9 @@
                 </button>
     
                 <!-- Logo -->
-                <a href="/" class="ml-auto">
-                    <div id="logo" class="flex items-center mt-3 mr-5 md:-mr-20">
-                        <img src="../img/logoBlue.png" alt="Hjem" class="h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
+                <a href="/">
+                    <div id="logo" class="flex items-center">
+                        <img src="../img/logoBlue.png" alt="Hjem" class="h-12" />
                     </div>
                 </a>
             </div>
