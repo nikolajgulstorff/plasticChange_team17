@@ -14,12 +14,20 @@ import Foodchain from "../components/Foodchain.astro";
 		<!-- Sektion 1 -->
 		 
 			<section id="sektion1">
-				<article class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+				<div class="min-h-screen flex flex-col items-center pt-[20%] z-10">
 					<h1 class="hero glitch layers text-[#D1FD0A] text-9xl font-bold" data-text="PLASTIKPLANETEN"><span>PLASTIKPLANETEN</span></h1>
-				</article>
+					<h3 class="text-[#ffffff] text-4xl font-bold z-10">Et mareridt af plastik: Når plastikforurening truer fremtidens økosystemer</h3>
+					
+					<p class="text-[#ffffff] text-2xl font-bold z-10 pr-[60%] py-[15%]">
+					Et sted på havet<br>
+					År 2050</p>
+				
+				</div>
 
 				<div class="fixed bottom-5 right-10 z-20">
-					<img src="../img/megafon.png" alt="Megaphone" id="megaphoneImg" class="transition-transform duration-300 ease-in-out hover:scale-110 hover:opacity-90">
+					<a href="#sektion8" class="smooth-scroll">
+						<img src="../img/megafon.png" alt="Megaphone" id="megaphoneImg" class="transition-transform duration-300 ease-in-out hover:scale-110 hover:opacity-90">
+					</a>
 				</div>
 
 				<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp');"></div>
@@ -512,6 +520,22 @@ megaphoneImg.addEventListener("mouseenter", () => {
 megaphoneImg.addEventListener("mouseleave", () => {
     megaphoneImg.src = "../img/megafon.png";
 });
+
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const headerOffset = 80; // Adjust this value based on your header height
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
     </script>
 
 	</MainLayout>
