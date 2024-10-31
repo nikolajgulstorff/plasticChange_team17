@@ -51,39 +51,47 @@ import Foodchain from "../components/Foodchain.astro";
 				<!-- Sektion 1 færdig -->
 
 				<!-- Sektion 2 -->
-			<section class=" relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
-					<article class="pt-[20%] grid grid-cols-2 grid-rows-1 gap-6 mx-[10%] text-white">
-					<div>
-						<p class="text-2xl pb-[10%]">Når plastik ender i naturen, bliver det en dræber.  Der er fundet plastikpartikler hos en række havfugle, havpattedyr, skildpadder og fisk. Det giver dem en falsk følelse af mæthed og blokerer for, at dyrene kan optage næring gennem tarmene. Dyrene kan derfor ende med at dø af sult, når de spiser plastik. Andre dyr bliver viklet ind i plastik på jagt efter føde og ender med at drukne.</p>
-						<h3 class="text-[#D1FD0A] text-5xl font-bold">I 2050 FORVENTES DER AT VÆRE MERE PLASTIK I HAVET END FISK</h3>
-					</div>
+				<section class="relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
 
-						<div class="grid grid-cols-3 grid-rows-3 pl-10">
-							<div>
-							<img src="../img/fisk1.png" alt="fisk" class="col-start-1 row-start-2 animate-swim">
-							<img src="../img/color-fish.png" alt="fisk" class="col-start-1 row-start-3 animate-swim">
-							</div>
-							<div>
-							<img src="../img/fisk2.png" alt="fisk" class="col-start-2 row-start-1 animate-swim">
-							<img src="../img/haj.png" alt="fisk" class="col-start-2 row-start-3 animate-swim">
-							</div>
-							<div>
-							<img src="../img/seahorse.png" alt="fisk" class="col-start-3 row-start-1 animate-swim">
-							<img src="../img/fisk3.png" alt="fisk" class="col-start-3 row-start-2 animate-swim">
-							</div>
-							
+					<div class="absolute inset-0 grid grid-cols-3 grid-rows-3 pointer-events-none">
+						<div class="animate-swim absolute top-[5%] right-[15%]">
+							<img src="../img/seahorse.png" alt="fisk" class="parallaxgrafik1 h-auto max-w-[150px]">
 						</div>
+						<div class="animate-swim absolute top-[25%] left-[10%]">
+							<img src="../img/fisk1.png" alt="fisk" class="parallaxgrafik2 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[35%] left-[30%]">
+							<img src="../img/color-fish.png" alt="fisk" class="parallaxgrafik3 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[50%] right-[20%]">
+							<img src="../img/fisk2.png" alt="fisk" class="parallaxgrafik4 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[60%] left-[5%]">
+							<img src="../img/haj.png" alt="fisk" class="parallaxgrafik5 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[80%] right-[5%]">
+							<img src="../img/fisk3.png" alt="fisk" class="parallaxgrafik6 h-auto max-w-[150px]">
+						</div>
+					</div>
+				
+				
+				
+					<article class="relative text-white flex flex-col gap-6 py-[15%] z-10">
+
+						<div class="pb-[10%] ">
+							<p class="text-2xl pb-[10%] mx-[30%]">Når plastik ender i naturen, bliver det en dræber.  Der er fundet plastikpartikler hos en række havfugle, havpattedyr, skildpadder og fisk. Det giver dem en falsk følelse af mæthed og blokerer for, at dyrene kan optage næring gennem tarmene. Dyrene kan derfor ende med at dø af sult, når de spiser plastik. Andre dyr bliver viklet ind i plastik på jagt efter føde og ender med at drukne.</p>
+							<h3	class="text-[#D1FD0A] text-6xl text-center font-bold mx-[20%]">I 2050 FORVENTES DER AT VÆRE MERE PLASTIK I HAVET END FISK</h3>
+						</div>
+				
+						<div>
+							<p class="text-2xl  mx-[30%]">Plastikken nedbrydes ikke men bliver til mikroplast. Når mikroplastik ligger i havet kan det “suge” miljøgifte og farlige kemikalier til sig, som dyrene får med, når de spiser plastik. Dyr, der ender på vores egen tallerken.</p>
+							<Foodchain />
+							<h3 class="text-[#D1FD0A] text-6xl text-center font-bold mx-[20%] pb-[10%]">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. DET ER TILSVARENDE AT SPISE SIT EGET DANKORT<h2>
+							<img>
+						</div>
+						
 					</article>
 				
-					<article class="grid grid-cols-2 grid-rows- gap-4 text-white mx-[10%] py-[20%]">
-						<div>
-							<p class="pb-[10%] text-2xl">Plastikken nedbrydes ikke men bliver til mikroplast. Når mikroplastik ligger i havet kan det “suge” miljøgifte og farlige kemikalier til sig, som dyrene får med, når de spiser plastik. Dyr, der ender på vores egen tallerken..</p>
-							<h3 class="text-[#D1FD0A] text-5xl font-bold">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. DET SVARER TIL AT SPISE SIT EGET DANKORT</h3>
-							
-						</div>
-						<Foodchain />
-					</article>
-	
 				</section>
 			
 				<!-- Sektion 3 -->
@@ -289,9 +297,30 @@ import Foodchain from "../components/Foodchain.astro";
 
 			<script>
 			/* Import af Motion One biblioteket */
-			import { animate, stagger, inView, scroll, timeline } from "motion";
+			import { animate, stagger, inView, scroll, timeline, ScrollOffset } from "motion";
 
-			 
+			/* Parallax scroll for more realistic fish movement */
+scroll(animate(".parallaxgrafik1", { x: [-50, 100], y: [50, -100] }), {
+    target: document.querySelector(".parallaxgrafik1"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik2", { x: [100, -150], y: [200, -300] }), {
+    target: document.querySelector(".parallaxgrafik2"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik3", { x: [-75, 125], y: [100, -150] }), {
+    target: document.querySelector(".parallaxgrafik3"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik4", { x: [150, -100], y: [50, -200] }), {
+    target: document.querySelector(".parallaxgrafik4"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik5", { x: [-200, 100], y: [150, -250] }), {
+    target: document.querySelector(".parallaxgrafik5"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik6", { x: [50, -300], y: [200, -100] }), {
+    target: document.querySelector(".parallaxgrafik6"), offset: ["start end", "end start"]
+});
+
+
+			 /* Parralax scroll */
 			  document.querySelectorAll("h2").forEach((heading) => {
            
             heading.style.opacity = 0;
@@ -301,13 +330,26 @@ import Foodchain from "../components/Foodchain.astro";
                 if (isIntersecting) {
                     // Trigger fade-in and zoom når H2 er i midten af viewport
                     animate(
-                        target,
+						target,
                         { opacity: [0, 1], transform: ["scale(0.8)", "scale(1)"] },
-                        { duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
-                    );
+                        { duration: 0.9, easing: [0.17, 0.55, 0.55, 1] },
+						
+                    )
+					return () => {
+					animate(
+						target,
+						{ opacity: [1], transform: ["scale(0.8)", "scale(1)"] },
+                        { duration: 0 }
+					)
+					};
                 }
-            }, { margin: "-50% 0px" }); // Trigger point: middle of viewport
+            }, { offset: ["start end", "end end"]  }); // Trigger point: middle of viewport
         });
+
+
+
+
+
 
 		inView("#stagger", () => {
   animate(
@@ -350,7 +392,7 @@ observer.observe(progressBar);
 			garbageClone,
 			{ 
 				y: [-100, 8800],        // Fall from top to deep position
-				opacity: [1,0.95, 0],       // Fade out by the end
+      // Fade out by the end
 			},
 			{
 				duration: 20 + index * 0.5,  // Vary duration for a natural look
