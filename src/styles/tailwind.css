@@ -38,7 +38,6 @@ h1 {
   font-family: "Protest Guerrilla", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 50px;
   color: var(--primary-color-100);
 }
 
@@ -56,18 +55,16 @@ h3 {
 
 p {
   font-family: "DM Sans", sans-serif;
-  font-weight: 700;
   font-style: normal;
   font-size: 20px;
   color: white;
 }
 
 .hero {
-  font-size: clamp(40px, 10vw, 100px);
   line-height: 1;
   display: inline-block;
   z-index: 10;
-  letter-spacing: 10px;
+  letter-spacing: 15px;
   filter: drop-shadow(0 1px 3px);
 }
 
