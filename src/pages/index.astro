@@ -38,7 +38,11 @@ import Foodchain from "../components/Foodchain.astro";
 					<img src="../img/flaskYellow.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
 					<img src="../img/plastbag.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
 					<img src="../img/plastbag.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
-				</div>
+					<img src="../img/plastic_cup.png" alt="Plastic garbage" class="garbage-animation absolute top-[-300px] left-1/2 max-w-[100px]"/>
+				    <img src="../img/cup.png" alt="Plastic garbage" class="garbage-animation absolute top-[-300px] left-1/2 max-w-[100px]"/>
+				    <img src="../img/cup2.png" alt="Plastic garbage" class="garbage-animation absolute top-[-300px] left-1/2 max-w-[100px]"/>
+                    <img src="../img/bottle1.png" alt="Plastic garbage" class="garbage-animation absolute top-[-300px] left-1/2 max-w-[100px]"/>			
+			</div>
 				
 					<div class="relative flex-col flex">
 
@@ -70,6 +74,7 @@ import Foodchain from "../components/Foodchain.astro";
 						<div class="animate-swim absolute top-[5%] right-[15%]">
 							<img src="../img/seahorse.png" alt="fisk" class="parallaxgrafik1 h-auto max-w-[150px]">
 						</div>
+						
 						<div class="animate-swim absolute top-[25%] left-[10%]">
 							<img src="../img/fisk1.png" alt="fisk" class="parallaxgrafik2 h-auto max-w-[150px]">
 						</div>
@@ -82,8 +87,26 @@ import Foodchain from "../components/Foodchain.astro";
 						<div class="animate-swim absolute top-[60%] left-[5%]">
 							<img src="../img/haj.png" alt="fisk" class="parallaxgrafik5 h-auto max-w-[150px]">
 						</div>
-						<div class="animate-swim absolute top-[80%] right-[5%]">
+						<div class="animate-swim absolute top-[80%] right-[10%]">
 							<img src="../img/fisk3.png" alt="fisk" class="parallaxgrafik6 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[40%] left-[15%]">
+							<img src="../img/turtle.png" alt="fisk" class="parallaxgrafik7 h-auto max-w-[250px]">
+						</div>
+						<div class="animate-swim absolute top-[750%] right-[8%]">
+							<img src="../img/jelly2.png" alt="fisk" class="parallaxgrafik8 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[10%] left-[30%]">
+							<img src="../img/jelly2.png" alt="fisk" class="parallaxgrafik9 h-auto max-w-[150px]">
+						</div>
+						<div class="animate-swim absolute top-[60%] right-[15%]">
+							<img src="../img/goldfish.png" alt="fisk" class="parallaxgrafik10 h-auto max-w-[200px]">
+						</div>
+						<div class="animate-swim absolute top-[30%] left-[25%]">
+							<img src="../img/nemo.png" alt="fisk" class="parallaxgrafik11 h-auto max-w-[200px]">
+						</div>
+						<div class="animate-swim absolute top-[80%] right-[70%]">
+							<img src="../img/puffer.png" alt="fisk" class="parallaxgrafik12 h-auto max-w-[200px]">
 						</div>
 					</div>
 				
@@ -384,6 +407,28 @@ scroll(animate(".parallaxgrafik5", { x: [-200, 100], y: [150, -250] }), {
 scroll(animate(".parallaxgrafik6", { x: [50, -300], y: [200, -100] }), {
     target: document.querySelector(".parallaxgrafik6"), offset: ["start end", "end start"]
 });
+scroll(animate(".parallaxgrafik7", { x: [-150, 75], y: [150, -150] }), {
+    target: document.querySelector(".parallaxgrafik7"), offset: ["start end", "end start"]
+});
+
+scroll(animate(".parallaxgrafik8", { x: [250, -150], y: [-250, 100] }), {
+    target: document.querySelector(".parallaxgrafik8"), offset: ["start end", "end start"]
+});
+
+scroll(animate(".parallaxgrafik9", { x: [-100, 50], y: [250, 75] }), {
+    target: document.querySelector(".parallaxgrafik9"), offset: ["start end", "end start"]
+});
+
+scroll(animate(".parallaxgrafik10", { x: [-50, 50], y: [100, -75] }), {
+    target: document.querySelector(".parallaxgrafik10"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik11", { x: [-200, 350], y: [125, -175] }), {
+    target: document.querySelector(".parallaxgrafik11"), offset: ["start end", "end start"]
+});
+scroll(animate(".parallaxgrafik12", { x: [-150, 150], y: [125, -125] }), {
+    target: document.querySelector(".parallaxgrafik12"), offset: ["start end", "end start"]
+});
+
 
 
 			 /* Parralax scroll */
