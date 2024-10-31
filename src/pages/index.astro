@@ -75,13 +75,21 @@ import Foodchain from "../components/Foodchain.astro";
 						</div>
 					</article>
 				
-					<article class="grid grid-cols-2 grid-rows- gap-4 text-white mx-[10%] py-[20%]">
+					<article class="grid grid-cols-2 grid-rows- gap-4 text-white mx-[10%] section1">
 						<div>
-							<p class="pb-[10%] text-2xl">Plastikken nedbrydes ikke men bliver til mikroplast. Når mikroplastik ligger i havet kan det “suge” miljøgifte og farlige kemikalier til sig, som dyrene får med, når de spiser plastik. Dyr, der ender på vores egen tallerken..</p>
-							<h3 class="text-[#D1FD0A] text-5xl font-bold">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. DET SVARER TIL AT SPISE SIT EGET DANKORT</h3>
-							
-						</div>
+							<p class="pb-[10%] text-2xl">Dyr vikles ind i plastaffald, hvilket ofte fører til alvorlige skader eller død. Over 270 arter, herunder pattedyr, krybdyr, fugle og fisk, påvirkes af plast, som de enten bliver fanget i eller indtager. Plastikken kan ikke fordøjes og skaber indre skader og blokeringer, som ofte er dødelige. Når plast nedbrydes til mikroplast i havet, tiltrækker det miljøgifte og kemikalier, som ophobes i dyr. Dyr der ender på vores egen tallerken.</p>
+							</div>
 						<Foodchain />
+						</article>
+
+						<article class="grid grid-cols-2 flex-col gap-4 text-white mx-[10%] py-[10%] section2">
+						 <div class="flex items-center justify-center">
+							<h3 class="text-[#D1FD0A] text-5xl font-bold">OM UGEN INDTAGER MENNESKET GENNEMSNITLIGT 5 GRAM PLASTIK. DET SVARER TIL AT SPISE SIT EGET DANKORT</h3>
+							</div> 
+							<div class="flex items-center justify-center">
+                               <img class="" src="../img/dankortmand.webp" alt="Dankortmand">
+                               </div>
+						
 					</article>
 	
 				</section>
@@ -369,7 +377,19 @@ observer.observe(progressBar);
 		
 		startGarbageFall();
 
-		
+		const inviewelement = document.querySelector(".section1");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeInRight", "animate__delay-1s")
+		})
+
+			const inviewelement1 = document.querySelector(".section2");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("animate__animated","animate__fadeInRight", "animate__delay-4s")
+		})
+
+
     </script>
 
 	</MainLayout>
