@@ -155,21 +155,32 @@ import Skriv_under from "../components/Scrollbar.astro";
 
 				<!-- Sektion 4 -->
 
-				<section class="relative w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/sunrise.webp');">
-					
-					<h3 class="text-5xl text-center px-[m10%] py-[10%]">Hvad gør vi med fremtiden</h3>
+				<section class="relative w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/gradient.svg');">
+				
+					<h1 class=" fade-in text-6xl text-center px-[m10%] py-[5%]">Hvad gør vi med fremtiden?</h1>
 
-					<article class="flex mx-[10%] mr-[10%]">
-						<div class="flex">
-							<p>Lige nu og i fremtiden bliver størstedelen af vores plastik affald smidt ud og ender i miljøet eller sendt til forbænding. Dette vil vi i Plastic Change gerne ændre.</p>
+					<article id="stagger" class="grid grid-cols-5 fotosektioninview">
+						
+						<div class="flex flex-col-reverse pl-20">
+							<p class="section1">Lige nu og i fremtiden bliver størstedelen af vores plastik affald smidt ud og ender i miljøet eller sendt til forbænding. Dette vil vi i Plastic Change gerne ændre.</p>
+						</div>
+						<div class="fotoinview">
 							<img src="../img/trianglePre.png">
 						</div>
+						
+                            
+						<div class="flex flex-col justify-center fotoinview1">
+                          <img class="flex-row self-center" src="../img/arrow.svg">
+						</div>
 
-						<div class="flex">
+						<div class="flex flex-row-reverse fotoinview2">
 							<img src="../img/trianglePost.png">
+						</div>
+						<div class="flex flex-col-reverse pr-20 section2">
 							<p>Vores løsning er at reducere vores brug af plastik, og genbruge det der allerede findes. </p>
 						</div>
 					</article>
+					
 
 					<!-- Sektion 5 -->
 
@@ -193,31 +204,47 @@ import Skriv_under from "../components/Scrollbar.astro";
 					</article>
 
 				<!-- Sektion 6 -->
-						<article class="flex items-center justify-center px-[10%] py-[10%]">
-							
-							<div class="p-6 rounded-lg max-w-md w-full text-center">
-							
-								<h3 class="text-5xl font-bold text-black">16.000</h3>
-								<p class="mb-4">Har allerede skrevet under</p>
 						
-								<div class="w-full bg-gray-300 h-10 rounded-full mb-6">
-									<div class="h-full bg-blue-600 rounded-full" style="width: 70%;"></div>
-								</div>
+				<section class="text-center">
+					<h1 class=" fade-in text-[#D1FD0A]">Stem for den globale plastiktraktat</h1>
+					<h3 class="text-white text-3xl py-10">Kæmp med os og gør havet rent igen</h3>
+				
+						<article class="grid lg:grid-cols-3 gap-3">
+
+							<div class="col-start-3 row-start-1 flex flex-col">
+							<img class="self-center w-2/3 animate-swim" src="../img/jelly2.png">
+							</div>
+
+							<div class=" text-center col-start-2 row-start-1 flex-col justify-start">
+								<h3 class="text-5xl font-bold text-[#D1FD0A]">15.938</h3>
+								<p class="mb-4 text-white">Har allerede skrevet under</p>
+						
+								<div class="w-full max-w-lg h-8 bg-white rounded-xl overflow-hidden mx-auto my-5">
+                                <div id="progress-bar" class="w-full h-full bg-[#0F2637]"></div>
+                                </div>
+
 						
 								<input type="email" placeholder="jensjensen@mail.com" class="w-full bg-gray-100 p-2 mb-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
 						
 								<!-- Checkbox for vilkår og betingelser -->
 								<label class="flex items-center space-x-2 mb-4 text-gray-600 text-sm">
 									<input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600 border-gray-300 rounded">
-									<span>Jeg accepterer vilkår og betingelser</span>
+									<span class="text-white">Jeg accepterer vilkår og betingelser</span>
 								</label>
 						
 								<!-- Skriv Under Knap -->
-								<button class="w-full bg-[#D1FD0A] text-black font-semibold p-2 rounded-full hover:bg-blue-600">
-									SKRIV UNDER
+								<button class="w-full bg-[#D1FD0A] text-[#0F2637] font-semibold p-2 rounded-full hover:bg-[#0F2637] hover:text-white">
+									SKRIV UNDER OG STØT KAMPEN
 								</button>
+								
+							</div>
+							<div class="col-start-1 row-start-1 flex flex-col">
+	                         <img class="self-center w-2/3 animate-swim" src="../img/turtle.png">
 							</div>
 						</article>
+						
+                </section>
+					
 				
 
 					<!-- Sektion 7 -->
@@ -293,8 +320,6 @@ import Skriv_under from "../components/Scrollbar.astro";
 			<script>
 			/* Import af Motion One biblioteket */
 			import { animate, stagger, inView, scroll, timeline } from "motion";
-
-	
 			 
 			  document.querySelectorAll("h2").forEach((heading) => {
             // heading starter gemt
@@ -313,7 +338,36 @@ import Skriv_under from "../components/Scrollbar.astro";
             }, { margin: "-50% 0px" }); // Trigger point: middle of viewport
         });
 
-		
+	
+
+inView("#stagger", () => {
+  animate(
+    ".fotosektioninview > div",
+    { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+    {
+      delay: stagger(1, { start: 0.5 }), // Justér starttid og delay for at finjustere animationen
+      duration: 1.5, // Sætter varigheden af hver animation
+      easing: "ease-out" // Sætter en glidende effekt
+    }
+  );
+});
+
+// JavaScript til at starte animationen i synsfeltet
+const progressBar = document.getElementById("progress-bar");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      progressBar.classList.add("animate-progress-fill"); // Tilføj animationen
+      observer.unobserve(progressBar); // Stop med at observere
+    }
+  });
+}, { threshold: 0.5 }); // Aktiver animationen, når 50% af bjælken er synlig
+
+observer.observe(progressBar);
+
+
+
     </script>
 
 	</MainLayout>
