@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .font-main {
+    font-family: var(--main-font);
+  }
+}
+
 @layer base {
   .fade-in {
     animation: fade-in 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
@@ -32,6 +38,7 @@
 :root {
   --primary-color-100: #d1fd0a;
   --primary-color-200: #0c2533;
+  --main-font: "Protest Guerrilla", sans-serif;
 }
 
 h1 {
