@@ -2,16 +2,16 @@
 
 ---
 
-<div id="stagger" class="flex justify-center relative p-10">
-    <ul class="staggeranimation flex gap-2 list-none p-0 m-0">
+<div id="stagger" class="flex justify-center relative py-[5%]">
+    <ul class="staggeranimation flex gap-16 list-none p-0 m-0">
         <li class="opacity-1 relative left-2">
-            <img src="/img/flaske.png" alt="Billed af microplast" class="max-w-[100px] h-auto" />
+            <img src="/img/flaske.png" alt="Billed af microplast" class="max-w-[200px] h-auto" />
         </li>
         <li class="opacity-1 relative left-2">
-            <img src="/img/fish_chain.png" alt="Fisk med åben mund der forsøger at spise en plastik flaske" class="max-w-[100px] h-auto" />
+            <img src="/img/fish_chain.png" alt="Fisk med åben mund der forsøger at spise en plastik flaske" class="max-w-[200px] h-auto" />
         </li>
         <li class="opacity-1 relative left-2">
-            <img src="/img/mouth_op.png" alt="Kvinde med åben mund der forsøger at spise en fisk" class="max-w-[100px] h-auto" />
+            <img src="/img/mouth_op.png" alt="Kvinde med åben mund der forsøger at spise en fisk" class="max-w-[200px] h-auto" />
         </li>
         
     </ul>
@@ -24,7 +24,7 @@ import { inView, animate, stagger } from 'motion';
         animate(
             ".staggeranimation li",
             { opacity: [0, 1] },
-            { delay: stagger(1, { start: 2 }) }
+            { delay: stagger(1, { start: 1 }) }
         );
     });
 </script>
