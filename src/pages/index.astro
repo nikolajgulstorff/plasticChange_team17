@@ -143,24 +143,48 @@ import Foodchain from "../components/Foodchain.astro";
 
 					<!-- Sektion 5 -->
 
-					<article class="px-[m10%] py-[10%]">
+					<article class="px-[10%] py-[10%]">
 						<h3 class="text-[#D1FD0A] text-center text-5xl font-bold">HVAD KAN VI GØRE FOR AT ÆNDRE DET</h3>
-						<h4 class="text-center text-3xl font-bold">DE 7 GODE RÅD MOD PLASTIKSSPILD</h4>
-
-							<div>
-								<div class="flex justify-center">
-									<div class="flex flex-col text-center items-center"><h5>DRIKKEDUNK</h5><img src="../img/7rad_drikkedunk.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>MÆLK</h5><img src="../img/7rad_maelk.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>TØJVASK</h5><img src="../img/7rad_maskinevask.png"></div>
+						<h4 class="text-center text-3xl font-bold mt-8">DE 7 GODE RÅD MOD PLASTIKSPILD</h4>
+						
+						<div>
+							<div id="staggers1" class="flex justify-center gap-20 mt-24 staggeranimation">
+								<div class="flex flex-col text-center items-center">
+									<h5>DRIKKEDUNK</h5>
+									<img src="../img/vanddunk 1.png" alt="Drikkedunk" class="max-h-[130px] mt-3">
 								</div>
-								<div class="flex justify-center">
-									<div class="flex flex-col text-center items-center"><h5>PLEJEPRODUKTER</h5><img src="../img/7rad_pleje.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>FESTER</h5><img src="../img/7rad_martini.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>TOILETBESØG</h5><img src="../img/7rad_toilet.png"></div>
-									<div class="flex flex-col text-center items-center"><h5>INDKØB</h5><img src="../img/7rad_indkob.png"></div>
+								<div class="flex flex-col text-center items-center">
+									<h5>MÆLK</h5>
+									<img src="../img/milk 1.png" alt="Mælk" class="max-h-[130px] mt-3">
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5>TØJVASK</h5>
+									<img src="../img/vaskemaskine 1.png" alt="Tøjvask" class="max-h-[130px] mt-3">
 								</div>
 							</div>
+					
+							<div id="staggers2" class="flex justify-center gap-16 mt-16 staggeranimation">
+								<div class="flex flex-col text-center items-center">
+									<h5>PLEJEPRODUKTER</h5>
+									<img src="../img/kosmetik 1.png" alt="Plejeprodukter" class="max-h-[130px] mt-3">
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5>FESTER</h5>
+									<img src="../img/drink 1.png" alt="Fester" class="max-h-[130px] mt-3">
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5>TOILETBESØG</h5>
+									<img src="../img/toilet 1.png" alt="Toiletbesøg" class="max-h-[130px] mt-3">
+								</div>
+								<div class="flex flex-col text-center items-center">
+									<h5>INDKØB</h5>
+									<img src="../img/mulepose 1.png" alt="Indkøb" class="max-h-[130px] mt-3">
+								</div>
+							</div>
+						</div>
 					</article>
+					
+					
 
 				<!-- Sektion 6 -->
 						<article class="flex items-center justify-center px-[10%] py-[10%]">
@@ -258,7 +282,7 @@ import Foodchain from "../components/Foodchain.astro";
 							</div>
 						
 							<!-- Submit Knap -->
-							<button class="w-full bg-[#D1FD0A] text-black p-2 rounded-full hover:bg-green-700">Ja tak, støt nu!</button>
+							<button class="w-full bg-[#D1FD0A] text-black p-2 rounded-full hover:bg-[#c8e640]">Ja tak, støt nu!</button>
 						<div>
 						</article>
 
@@ -327,7 +351,25 @@ setInterval(startGarbageFall, 3000);
 // Initial start
 startGarbageFall();
 
-		
+
+
+// Animation for the first stagger group
+inView("#staggers1", () => {
+    animate(
+        "#staggers1 > div",
+        { opacity: [0, 1], transform: ["translateX(-100px)", "translateX(0)"] },
+        { delay: stagger(0.3, { start: 0.5 }) }
+    );
+});
+
+// Animation for the second stagger group
+inView("#staggers2", () => {
+    animate(
+        "#staggers2 > div",
+        { opacity: [0, 1], transform: ["translateX(-100px)", "translateX(0)"] },
+        { delay: stagger(0.3, { start: 1.5 }) }
+    );
+});
     </script>
 
 	</MainLayout>
