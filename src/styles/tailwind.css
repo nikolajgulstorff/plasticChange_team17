@@ -53,6 +53,16 @@ h3 {
   font-style: normal;
 }
 
+h5 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 30px;
+  color: var(--primary-color-100);
+}
+
+h6 {
+  font-family: "DM Sans", sans-serif;
+}
+
 p {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
