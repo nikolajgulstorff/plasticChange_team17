@@ -2,20 +2,21 @@
 
 ---
 
-<div id="stagger" class="flex justify-center relative py-[5%] overflow-hidden">
-    <ul class="staggeranimation flex gap-16 list-none p-0 m-0">
+<div id="stagger" class="flex justify-center relative py-24 md:py-[5%]">
+    <ul class="staggeranimation flex gap-2 md:gap-16 list-none p-0 m-0">
         <li class="opacity-1 relative left-2">
-            <img src="/img/flaske.png" alt="Billed af microplast" class="max-w-[200px] h-auto" />
+            <img src="/img/flaske.png" alt="Billed af microplast" class="max-w-[120px] sm:max-w-[200px] h-auto" />
         </li>
         <li class="opacity-1 relative left-2">
-            <img src="/img/fish_chain.png" alt="Fisk med åben mund der forsøger at spise en plastik flaske" class="max-w-[200px] h-auto" />
+            <img src="/img/fish_chain.png" alt="Fisk med åben mund der forsøger at spise en plastik flaske" class="max-w-[120px] sm:max-w-[200px] h-auto" />
         </li>
-        <li class="opacity-1 relative left-2">
-            <img src="/img/mouth_op.png" alt="Kvinde med åben mund der forsøger at spise en fisk" class="max-w-[200px] h-auto" />
+        <li class="opacity-1 relative left-2 -mt-8 md:relative md:left-0 md:-mt-0">
+            <img src="/img/mouth_op.png" alt="Kvinde med åben mund der forsøger at spise en fisk" class="max-w-[120px] sm:max-w-[200px] h-auto" />
         </li>
-        
     </ul>
 </div>
+
+
 
 <script>
 import { inView, animate, stagger } from 'motion';
