@@ -32,7 +32,7 @@ import Foodchain from "../components/Foodchain.astro";
 
 				<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/img/bg_section1_1.webp');"></div>
 				
-				<div class="absolute inset-0 z-10 pointer-events-none">
+				<div class="absolute inset-0 z-10 pointer-events-none overflow-hidden">
 					<img src="../img/flaskBlue.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2 "/>
 					<img src="../img/flaskBlue.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
 					<img src="../img/flaskYellow.png" alt="Plastic garbage" class="garbage-animation absolute top-[-100px] left-1/2"/>
@@ -45,7 +45,6 @@ import Foodchain from "../components/Foodchain.astro";
 			</div>
 				
 					<div class="relative flex-col flex">
-
 						<article class="min-h-screen flex flex-col text-center items-center justify-center pb-[5%] mb-[20%] text-white">
 							<h2 class="text-6xl font-bold pb-[5%]" id="first-heading">HVERT ÅR AFBRÆNDES DER<br><span class="font-main text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>PLASTIK</h2>
 							<h2 class="text-6xl font-bold pb-[5%]" id="second-heading">HVILKET FORURENER MED<br><span class=" font-main text-[#D1FD0A] text-7xl font-bold">400 MIO. TONS</span><br>CO2 OM ÅRET</h2>
@@ -63,12 +62,14 @@ import Foodchain from "../components/Foodchain.astro";
 							<h2 class="text-6xl font-bold pb-[5%]" id="second-heading">Det er tilsvarende at én lastbil med plastik tømmes<br><span class="font-main text-[#D1FD0A] text-7xl font-bold">HVERT MINUT</span></h2>
 							<h2 class="text-6xl font-bold pb-[5%]" id="second-heading">MED DEN NUVÆRENDE KURS ER DET<br><span class="font-main text-[#D1FD0A] text-9xl font-bold">FIRDOBLET</span><br>INDEN 2050</h2>
 						</article>
+					</div>
+
 			</section>
 				<!-- Sektion 1 færdig -->
 
 				
 				<!-- Sektion 2 -->
-				<section id="sektion2" class="relative h-full w-full bg-cover bg-center min-h-screen" style="background-image: url('/img/bg_section1_2.webp');">
+				<section id="sektion2" class="relative h-full w-full bg-cover bg-center min-h-screen overflow-hidden" style="background-image: url('/img/bg_section1_2.webp');">
 
 					<div class="absolute inset-0 grid grid-cols-3 grid-rows-3 pointer-events-none">
 						<div class="animate-swim absolute top-[5%] right-[15%]">
@@ -325,8 +326,6 @@ import Foodchain from "../components/Foodchain.astro";
 							  </div>
 							  </div>
 							</div>
-						
-					
 
 					</article>
 
